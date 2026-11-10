@@ -3,9 +3,9 @@
 // Parent Class
 class Clothes {
 
-    public $brand;
-    protected $color;
-    private $price;
+    public $brand; //Public : diwariskan dan bisa diakses dari luar class
+    protected $color; //Protected: bisa diakses parent dan child class
+    private $price; // Private: hanya bisa diakses langsung di dalam Clothes
 
     // Constructor
     public function __construct($brand, $color, $price) {
@@ -33,6 +33,8 @@ class Clothes {
 
 // Child Class Jacket
 class Jacket extends Clothes {
+     // Mewarisi brand, color, constructor, dan tampilkanHarga()
+    // Price tidak bisa diakses secara langsung karena private
     public function display() {
         echo "=== JACKET ===<br>";
         echo "Brand: " . $this->getBrand() . "<br>";
@@ -43,6 +45,8 @@ class Jacket extends Clothes {
 
 // Child Class T-Shirt
 class TShirt extends Clothes {
+     // Mewarisi brand, color, constructor, dan tampilkanHarga()
+    // Price tidak bisa diakses secara langsung karena private
     public function display() {
         echo "=== T-SHIRT ===<br>";
         echo "Brand: " . $this->getBrand() . "<br>";
@@ -53,6 +57,8 @@ class TShirt extends Clothes {
 
 // Child Class Pants
 class Pants extends Clothes {
+      // Mewarisi brand, color, constructor, dan tampilkanHarga()
+    // Price tidak bisa diakses secara langsung karena private
     public function display() {
         echo "=== PANTS ===<br>";
         echo "Brand: " . $this->getBrand() . "<br>";
